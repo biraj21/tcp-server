@@ -47,6 +47,10 @@ int main(void) {
     return EXIT_FAILURE;
   }
 
+  // free server_info because we don't need it anymore
+  freeaddrinfo(server_info);
+  server_info = NULL; // to avoid dangling pointer (& double free at cleanup())
+
   char received_msg[1024];
   char *line = NULL;
   size_t line_cap = 0;
@@ -83,7 +87,10 @@ int main(void) {
 }
 
 void cleanup(void) {
-  freeaddrinfo(server_info); // free the addrinfo linked list
+  // free the addrinfo linked list
+  if (server_info != NULL) {
+    freeaddrinfo(server_info);
+  }
 }
 
 void handle_sigint(int sig) {

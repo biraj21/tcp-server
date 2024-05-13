@@ -8,8 +8,8 @@ all: clean $(bin)/server $(bin)/client
 clean:
 	rm -f $(bin)/*
 
-$(bin)/server: $(src)/server.c
-	$(cc) $(flags) -o $@ $<
+$(bin)/server: $(src)/server.c $(src)/vector.c
+	$(cc) $(flags) -o $@ $^
 
 $(bin)/client: $(src)/client.c
 	$(cc) $(flags) -o $@ $<
