@@ -3,7 +3,10 @@ flags=-Wall -Werror
 src=src
 bin=bin
 
-all: clean $(bin)/server $(bin)/client
+all: setup clean $(bin)/server $(bin)/client
+
+setup:
+	mkdir -p $(bin)
 
 clean:
 	rm -f $(bin)/*
