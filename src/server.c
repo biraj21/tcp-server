@@ -204,7 +204,7 @@ int main(void) {
 
 static bool accept_new_connection(void) {
   // accept
-  struct sockaddr_in client_addr = {};
+  struct sockaddr_storage client_addr = {};
   socklen_t addr_size = sizeof client_addr;
 
   int conn_fd = accept(socket_fd, (struct sockaddr *)&client_addr, &addr_size);
