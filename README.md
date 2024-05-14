@@ -1,8 +1,8 @@
 # TCP Server in C
 
-This is a basic single-threaded TCP server with an event loop using the poll system call, written in C, without any third-party library, solely relying on native C functionalities. The server listens on a port and echoes back received data. I've also written a simple client to test the server.
+This is a basic single-threaded TCP server with an event loop using the poll system call, written in C, without any third-party library. The server listens on a port and echoes back received data. I've also written a simple client to test the server.
 
-I've followed the tutorial at [Beej's Guide to Network Programming](https://beej.us/guide/bgnet/html/multi/index.html) to gain an understanding of sockets before writing this server. I followed [The Event Loop Implementation](https://build-your-own.org/redis/06_event_loop_impl) to understand how to implement an event loop using `poll`. I also watched [Johannes 4GNU_Linux's YouTube video](https://www.youtube.com/watch?v=O-yMs3T0APU) to understand how to implement a simple event loop in C.
+For details on the [resources](#resources) utilized in this project, please refer to the section provided below.
 
 ## How to run
 
@@ -30,7 +30,7 @@ I've followed the tutorial at [Beej's Guide to Network Programming](https://beej
 
 6. Ctrl+C to stop the server and client.
 
-Resources:
+## Resources
 
 - [Beej's Guide to Network Programming](https://beej.us/guide/bgnet/html/multi/index.html)
 - [The Event Loop Implementation](https://build-your-own.org/redis/06_event_loop_impl)
