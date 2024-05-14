@@ -154,8 +154,6 @@ int main(void) {
         // decrement the number of connections
         --num_connections;
 
-        // decrement i because we replaced the current connection with the last
-        --i;
         continue;
       }
 
