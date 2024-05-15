@@ -5,7 +5,7 @@
 #include <stddef.h>     // for size_t
 #include <stdio.h>      // for printf(), perror(), fprintf(), puts()
 #include <stdlib.h>     // for EXIT_SUCCESS, EXIT_FAILURE, atexit(), exit()
-#include <string.h>     // for strncat(), strlen()
+#include <string.h>     // for memcpy(), strncat(), strlen()
 #include <sys/socket.h> // for socket(), bind(), listen(), accept(), recv(), send()
 #include <unistd.h>     // for close()
 
@@ -253,7 +253,7 @@ static void handle_connection_io(struct Connection *conn) {
 
     // concat the received message to the reply message
     strncat(conn->write_buffer, conn->read_buffer,
-            sizeof(conn->write_buffer) - sizeof(reply_start) - 1);
+            sizeof(conn->write_buffer) - sizeof(reply_start));
 
     int bytes_sent =
         send(conn->fd, conn->write_buffer, strlen(conn->write_buffer), 0);
