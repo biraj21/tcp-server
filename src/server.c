@@ -1,3 +1,6 @@
+// feature test macro for getaddrinfo() from man pages
+#define _POSIX_C_SOURCE 200112L
+
 #include <netdb.h>      // for getaddrinfo()
 #include <poll.h>       // for poll()
 #include <signal.h>     // for signal()
