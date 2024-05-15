@@ -1,0 +1,12 @@
+{
+  "files.associations": {
+    "*.h": "c"
+  },
+
+  "C_Cpp.clang_format_fallbackStyle": "LLVM",
+
+  "[c]": {
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true
+  }
+}
