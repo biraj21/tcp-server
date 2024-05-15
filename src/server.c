@@ -170,7 +170,7 @@ int main(void) {
     }
 
     // poll for active fds
-    rv = poll(vector_data(poll_fds), vector_length(poll_fds), 0);
+    rv = poll(vector_data(poll_fds), vector_length(poll_fds), -1);
     if (rv == -1) {
       perror("poll()");
     }
