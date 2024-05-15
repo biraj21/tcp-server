@@ -14,7 +14,7 @@ For details on the [resources](#resources) utilized in this project, please refe
    make
    ```
 
-3. Run the server (it will run on port 3000)
+3. Run the server (it will run on port 3001)
 
    ```bash
    ./bin/server
